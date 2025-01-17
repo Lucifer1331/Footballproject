@@ -1400,29 +1400,6 @@ start_time = datetime.now()
 u=0
 while True:
                 wn.update()
-                if u==0:
-                    u=1
-                    time.sleep(1)
-                    f1=open('scoresheet.txt','a+')
-                    r=f1.readlines()
-                    penp4.write(('PREVIOUS RESULTS'), align="center", font=("Courier", 24, "bold"))
-                    if len(r)>=3:
-                        penp1.write(r[-1], align="center", font=("Courier", 24, "bold"))
-                        penp2.write(r[-2], align="center", font=("Courier", 24, "bold"))
-                        penp3.write(r[-3], align="center", font=("Courier", 24, "bold"))
-                    elif len(r)==2:
-                        penp1.write(r[-1], align="center", font=("Courier", 24, "bold"))
-                        penp2.write(r[-2], align="center", font=("Courier", 24, "bold"))
-                    elif len(r)==1:
-                        penp2.write(r[-1], align="center", font=("Courier", 24, "bold"))
-                    else:
-                        penp2.write('NO PREVIOUS RESULTS', align="center", font=("Courier", 24, "bold"))
-                    time.sleep(5)
-                    penp1.clear()
-                    penp2.clear()
-                    penp3.clear()
-                    penp4.clear()
-                    f1.close()
                 
                 ball.setx(ball.xcor()+ball.dx)
                 ball.sety(ball.ycor()+ball.dy)
@@ -1647,7 +1624,7 @@ while True:
                     i=1
                     j=1
                     pen.write("A:{}  B:{}".format(score_a, score_b), align="center", font=("Courier", 24, "bold"))
-                    Pen.write("GOALLLL", align="center", font=("Courier", 60, "bold"))
+                    # Pen.write("GOALLLL", align="center", font=("Courier", 60, "bold"))
                     player_a_att1.goto(-100,120)
                     player_a_def2.goto(-460,-90)
                     player_a_def1.goto(-460,90)
@@ -1679,15 +1656,14 @@ while True:
                     player_b_def1.dy=0
                     player_b_def2.dy=0
                     player_b_mid1.dy=0
-                    time.sleep(2)
-                    Pen.clear()
+                   
 
                 elif (-100<ball.ycor()<100) and (750>ball.xcor()>670) and (minutes1==0 or (seconds1<30 and minutes1==1)):
                     pen.clear()
                     Pen.clear()
                     score_a+=1
                     pen.write("A:{}  B:{}".format(score_a, score_b), align="center", font=("Courier", 24, "bold"))
-                    Pen.write("GOALLLL", align="center", font=("Courier", 60, "bold"))        
+                    # Pen.write("GOALLLL", align="center", font=("Courier", 60, "bold"))       
                     player_a_att1.goto(-100,120)
                     player_a_def2.goto(-460,-90)
                     player_a_def1.goto(-460,90)
@@ -1719,8 +1695,6 @@ while True:
                     player_b_mid1.dy=0
                     i=1
                     j=1
-                    time.sleep(2)
-                    Pen.clear()
                 if (-100<ball.ycor()<100) and (-670>ball.xcor()>-750) and (seconds1>30 and minutes1>=1):
                     Pen.clear()
                     pen.clear()
@@ -1728,7 +1702,7 @@ while True:
                     i=1
                     j=1
                     pen.write("A:{}  B:{}".format(score_a, score_b), align="center", font=("Courier", 24, "bold"))
-                    Pen.write("GOALLLL", align="center", font=("Courier", 60, "bold"))
+                    # Pen.write("GOALLLL", align="center", font=("Courier", 60, "bold"))
                     p=0.5
                     player_a_att1.goto(-100,120)
                     player_a_def2.goto(-460,-90)
@@ -1761,15 +1735,14 @@ while True:
                     player_b_def1.dy=0
                     player_b_def2.dy=0
                     player_b_mid1.dy=0
-                    time.sleep(2)
-                    Pen.clear()
+                    
 
                 elif (-100<ball.ycor()<100) and (750>ball.xcor()>670) and (seconds1>30 and minutes1>=1):
                     pen.clear()
                     Pen.clear()
                     score_a+=1
                     pen.write("A:{}  B:{}".format(score_a, score_b), align="center", font=("Courier", 24, "bold"))
-                    Pen.write("GOALLLL", align="center", font=("Courier", 60, "bold"))        
+                    # Pen.write("GOALLLL", align="center", font=("Courier", 60, "bold"))        
                     p=0.5
                     player_a_att1.goto(-100,120)
                     player_a_def2.goto(-460,-90)
@@ -1802,8 +1775,7 @@ while True:
                     player_b_mid1.dy=0
                     i=1
                     j=1
-                    time.sleep(2)
-                    Pen.clear()
+                    
                 if seconds1 == (36+(score_a+score_b+p)*2) and minutes1 == 1:
                     pen.clear()
                     Pen.clear()
