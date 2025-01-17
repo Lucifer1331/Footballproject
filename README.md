@@ -30,9 +30,11 @@ Move Left: A
 
 Move Right: D
 
-Pass: E
+Pass: X
 
-Shoot: Space
+Shoot: C
+
+Switch: Tab
 
 Player 2 Controls:
 
@@ -44,11 +46,13 @@ Move Left: Left Arrow
 
 Move Right: Right Arrow
 
-Pass: Right Shift
+Pass: 3
 
-Shoot: Enter
+Shoot: 0
+
+Switch: 1
 
 ## How to Run
 Download the zip, extract and run the python file in VSCode or any other Python Editor.
 Make sure to have Keyboard library imported
-### pip install keyboard
+``pip install keyboard``
