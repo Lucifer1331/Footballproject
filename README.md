@@ -54,5 +54,4 @@ Switch: 1
 
 ## How to Run
 Download the zip, extract and run the python file in VSCode or any other Python Editor.
-Make sure to have Keyboard library imported
-``pip install keyboard``
+Make sure to have Keyboard library imported: ``pip install keyboard``
